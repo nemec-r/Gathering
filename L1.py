@@ -1,8 +1,8 @@
 import requests
 import json
-from pprint import pprint
-
-token = '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'
+#from pprint import pprint
+token_file = open("token.txt", "r")
+token = token_file.readline()
 username = 'nemec-r'
 
 users_repos = requests.get('https://api.github.com/user/repos', auth=(username, token))
